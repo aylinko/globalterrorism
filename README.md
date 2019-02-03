@@ -1,8 +1,6 @@
 ## Analysis of Global Terrorism
 #### Aylin Kosar
 
-Table of Contents
-toc: true
 
 # Introduction
 
