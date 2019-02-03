@@ -1,5 +1,5 @@
 # Analysis of Global Terrorism
-Aylin Kosar
+#### Aylin Kosar
 
 
 ## Introduction
@@ -11,7 +11,7 @@ Global Terrorism affects our world today and is many times portrayed with a misu
 
 The data was used was from the National Consortium for the Study of Terrorism and Responses to Terrorism (START). The same data set made public can be found in this Kaggle page https://www.kaggle.com/ecodan/global-terrorism-db/home. The data set contains **181691** observations and **135** variables. Eventually, the data was preprocessed to **121** variables.
 
-##### i. Data Description
+#### i. Data Description
 
 Below is a list of the variables in the data set and their description. 
 
