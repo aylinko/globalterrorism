@@ -15,3 +15,4 @@ The data was used was from the National Consortium for the Study of Terrorism an
 
 Below is a list of the variables in the data set and their description. 
 
+ 
