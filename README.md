@@ -22,4 +22,4 @@ The data was used was from the National Consortium for the Study of Terrorism an
 
 Clustering  and ... were used to conduct the analysis for the data.
 
-## Conclusion
+## Conclusion 
