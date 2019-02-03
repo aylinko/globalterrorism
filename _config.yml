@@ -2,3 +2,4 @@ theme: jekyll-theme-primer
 
 title: Global Terrorism
 description: A project created for The Data Incubator Fellowship
+toc: true
