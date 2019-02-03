@@ -1,37 +1,19 @@
-## Global Terrorism
+## Analysis of Global Terrorism
+#### Aylin Kosar
 
-You can use the [editor on GitHub](https://github.com/aylinko/globalterrorism/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Table of Contents
+TOC {:toc}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Introduction
 
-### Markdown
+Global Terrorism affects our world today and is many times portrayed with a misunderstanding of why it occurs. Whenever we hear of a terrorist attack, the news media always dramatizes it to be a larger issue than it really is especially when our country has a big issue with gun violence. Terrorism looks terrible now because of the expanded methods on harming people and the new technology that has arose. However, the ideology and the actual tactics that the group or individual deploys is still the same. I would like to see when the terrroist attacks occurs the most and at where it occurs.  
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+# Data 
 
-# Header 1
-## Header 2
-### Header 3
+The data was used was from the National Consortium for the Study of Terrorism and Responses to Terrorism (START). The same data set made public can be found in this Kaggle page https://www.kaggle.com/ecodan/global-terrorism-db/home. The data set contains **181691** observations and **135** variables. Eventually, the data was preprocessed to **121** variables.
 
-- Bulleted
-- List
+##### i. Data Description
 
-1. Numbered
-2. List
+Below is a list of the variables in the data set and their description. 
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/aylinko/globalterrorism/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
