@@ -9,10 +9,9 @@ Global Terrorism affects our world today and is many times portrayed with a misu
 
 ## Data 
 
-The data was used was from the National Consortium for the Study of Terrorism and Responses to Terrorism (START). The same data set made public can be found in this Kaggle page https://www.kaggle.com/ecodan/global-terrorism-db/home. The data set contains **181691** observations and **135** variables. Eventually, the data was preprocessed to **121** variables.
+The data was used was from the National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2018). The Global Terrorism Database (GTD) [Data file]. Retrieved from https://www.start.umd.edu/gtd". The same data set made public can be found in this Kaggle page https://www.kaggle.com/ecodan/global-terrorism-db/home. The data set contains **181691** observations and **135** variables. Eventually, the data was preprocessed to **121** variables.
 
-#### i. Data Description
+## Analysis
 
-Below is a list of the variables in the data set and their description. 
 
- 
+## Conclusion
