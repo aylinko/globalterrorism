@@ -2,8 +2,7 @@
 #### Aylin Kosar
 
 Table of Contents
-
-TOC {:toc}
+toc: true
 
 # Introduction
 
