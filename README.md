@@ -1,5 +1,5 @@
 # Analysis of Global Terrorism
-#### Aylin Kosar
+Aylin Kosar
 
 
 ## Introduction
