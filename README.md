@@ -1,3 +1,6 @@
+---
+toc: true
+---
 # Analysis of Global Terrorism
 #### Aylin Kosar
 
