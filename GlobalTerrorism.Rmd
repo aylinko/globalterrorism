@@ -1,0 +1,401 @@
+---
+title: "Analysis of Terror in the World"
+author: "Aylin Kosar"
+toc: true
+output: html_document
+---
+
+## Upload Data
+
+```{r message=FALSE, warning=FALSE}
+
+setwd("~/R Data Files")
+
+gt = read.csv("globalterrorism.csv", na.strings = "")
+
+gt
+
+```
+
+## Look for Missing Values 
+
+There are many variables and many columns that are not really needed for the analysis.
+
+```{r}
+
+summary(gt)
+
+```
+
+## Preprocess Data
+
+Below many of the columns that are not needed are removed and result with 36 variables. Some of the variables were not factored in properly so they had to be properly factored. In order to make sure the numeric variables were factored in correctly as type numeric, the function as.numeric was used.
+
+```{r}
+
+cols = c('related','addnotes','scite1','scite2','scite3','ransomnote', 'summary','location', 'doubtterr', 'alternative', 'alternative_txt', 'propcomment', 'dbsource','motive','specificity','vicinity','approxdate','extended','resolution','crit1','crit2', 'crit3','multiple', 'related', 'attacktype2','attacktype2_txt','attacktype3','attacktype3_txt','success','weapsubtype1','weapsubtype1_txt','weaptype2','weaptype2_txt','weapsubtype2','weapsubtype2_txt','weaptype3','weaptype3_txt','weapsubtype3','weapsubtype3_txt','weaptype4','weaptype4_txt','weapsubtype4','weapsubtype4_txt','weapdetail','corp1','targtype2','targtype2_txt','targsubtype2','targsubtype2_txt','corp2','target2','natlty2','natlty2_txt','targtype3','targtype3_txt','corp3','target3','natlty3','natlty3_txt','gname2','gsubname2','gname3','gsubname3','guncertain1','guncertain2','guncertain3','compclaim','claim2','claimmode2','claim3','claimmode3','property','propextent', 'propextent_txt','propvalue','ishostkid','nhours','ndays','divert','kidhijcountry','ransom','ransomamtus','ransompaidus','ransomnote','hostkidoutcome','hostkidoutcome_txt','nreleased','INT_LOG','INT_IDEO','INT_MISC','INT_ANY','nhostkid','nhostkidus','ransomamt', 'ransompaid','claimmode2_txt','claimmode3_txt','targsubtype3','targsubtype3_txt')
+
+ gt = gt[, !colnames(gt)%in% cols] 
+
+
+gt$ targsubtype1_txt = factor(gt$ targsubtype1_txt, levels = c("Unnamed Civilian/Unspecified", "Police Security Forces/Officers", 
+"Government Personnel (excluding police, military)", "Military Personnel (soldiers, troops, officers, forces)", "Military Unit/Patrol/Convoy", "Non-State Militia", "Laborer (General)/Occupation Identified", "House/Apartment/Residence", "Other"), ordered = TRUE)
+
+levels(gt$targsubtype1_txt) 
+
+gt$targtype1_txt = factor(gt$targtype1_txt) 
+
+levels(gt$targtype1_txt) = c("Private Citizens & Property", "Military", "Police", "Government (General)", "Business", "Transportation", "Abortion Related", "Airports & Aircraft","Government(Diplomatic)", "Educational Institution", "Food & Water Supply", "Journalists & Media", "Maritime", "NGO", "Religious Figures/Institutions", "Telecommunication", "Terrorists/Non-State Militia", "Tourists", "Transportation", 
+"Utilities", "Violent Political Parties", "Unknown", "Other")
+
+gt$gsubname = factor(gt$gsubname, levels = c("Militants", "People's Liberation Forces (FPL)", "Rebels", "Separatists", "Jamaat-ul-Ahrar", "The Family",  "al-Quds Brigades",  "Intifadat Ahrar al-Iraq",  "Forces for the Defense of Democracy (FDD)", "Jaysh al-Nukhba; Al-Izzah",  "Al-Rahman Corps", "Ezzedine al-Qassam Brigades", "Ahrar al-Sham",  "Al-Alami"), ordered = TRUE)
+
+levels(gt$gsubname) 
+
+gt$gname = factor(gt$gname, levels = c(" Taliban", "Islamic State of Iraq and the Levant (ISIL)",  "Shining Path (SL)",   "Farabundo Marti National Liberation Front (FMLN)", "Al-Shabaab",  "Al-Nusrah Front",  "Khorasan Chapter of the Islamic State", "Badr Brigades",  "National Liberation Army of Colombia (ELN)", "Free Syrian Army", "Jaish-e-Mohammad (JeM)", "National Democratic Alliance Army (NDAA-ESSA)", "Lashkar-e-Taiba (LeT)", "Unknown", "Other"), ordered = TRUE)
+
+levels(gt$gname) 
+
+gt$claimmode_txt  = factor(gt$claimmode_txt , levels = c("Personal claim", "Posted to website, blog, etc.", "Unknown", "Call (post-incident)", "Note left at scene", "E-mail", "Other"), ordered = TRUE)
+
+levels(gt$claimmode_txt) 
+
+gt$eventid = as.numeric(gt$eventid)
+gt$iyear = as.numeric(gt$iyear)
+gt$imonth = as.numeric(gt$imonth)
+gt$nperps = as.numeric(gt$nperps)
+gt$nperpcap = as.numeric(gt$nperpcap)
+gt$nkill = as.numeric(gt$nkill)
+gt$nkillus = as.numeric(gt$nkillus)
+gt$nkillter = as.numeric(gt$nkillter)
+gt$nwound = as.numeric(gt$nwound)
+gt$nwoundus = as.numeric(gt$nwoundus)
+gt$nwoundte = as.numeric(gt$nwoundte)
+gt$latitude = as.numeric(gt$latitude)
+gt$longitude = as.numeric(gt$longitude)
+
+summary(gt)
+
+```
+
+A new dataframe is created in order to store the original dataframe. The data is further cleaned by removing the missing data from the longitude variable and nkill variables. Then the nkillus and  nwoundus variables were removed. Now, 167355 observations and 36 variables are the end result. 
+
+```{r}
+
+gt2 = gt
+
+gt2 = gt2[!is.na(gt2$longitude),]
+gt2 = gt2[!is.na(gt2$nkill),]
+
+gt2 = gt2[-c(34,37)] 
+
+summary(gt2)
+
+```
+
+The NA's for this data set can not be entirely removed since most of the data will get lost. Therefore, the values with excessive amount NA's were factored with a M to signify it's a missing value. There will be still many NA's for the numerical data since they can't be coded with an M. Therefore, the remaining data was left alone.
+
+```{r}
+
+levels(gt2$natlty1_txt) = c(levels(gt2$natlty1_txt),"M")
+
+gt2$natlty1_txt[is.na(gt2$natlty1_txt)] = "M"
+
+
+levels(gt2$gname) = c(levels(gt2$gname),"M")
+
+gt2$gname[is.na(gt2$gname)] = "M"
+
+levels(gt2$gsubname) = c(levels(gt2$gsubname),"M")
+
+gt2$gsubname[is.na(gt2$gsubname)] = "M"
+
+
+levels(gt2$claimmode_txt) = c(levels(gt2$claimmode_txt),"M")
+
+gt2$claimmode_txt [is.na(gt2$claimmode_txt)] = "M"
+ 
+                        
+levels(gt2$targsubtype1_txt) = c(levels(gt2$targsubtype1_txt),"M")
+
+gt2$targsubtype1_txt [is.na(gt2$targsubtype1_txt)] = "M"
+
+
+levels(gt2$target1) = c(levels(gt2$target1),"M")
+
+gt2$target1 [is.na(gt2$target1)] = "M"
+
+
+levels(gt2$targsubtype1_txt) = c(levels(gt2$targsubtype1_txt),"M")
+
+gt2$targsubtype1_txt [is.na(gt2$targsubtype1_txt)] = "M"
+
+summary(gt2)
+
+```
+
+
+## Chi-Square
+
+Below many variables were tried however there were many variables that resulted in abnormal p-values by showing NA. Therefore, the variables below were the variables that produced the best results that also made sense. 
+
+For month, the data below showed in the month of May most atatcks occured in the Middle East and North Africa region with the frequency of 4096. The type of attacks that occured in the same month were with usgae of bombs and explosives which resulted in 7789 attacks. In the month of July, 3679 attacks against public places (coded as 14 = Private Citizens & Property) like markets, weddings, streets, pedestrians, etc. occured. Again in the month of May, terrorists made 584 personal claims of the attack while in July, there were 7890 attacks with usage of explosives. In the month of October, on the 9th day there were 570 attacks that were made. In May, the year of 2014, there were 1593 attacks. 
+
+For year, the data showed there were 6532 attacks in the Middle East and North Africa region. In the year 2014, there were 8509 bombing/explosive attacks.In the same year, public places (coded as 14 = Private Citizens & Property) were targeted with 3980 attacks. There were also 9193 attacks with usage of explosives in the year of 2014. In 2015, terrorists made 1057 personal claims to attacks. 
+
+For country, Iraq (coded as 95) had 18006 bombing/explosive attacks.Afghanistan (coded as 4) the police were targeted with 3475 attacks. Afghanistan had 1508 personal claims by terrorists. Iraq had 18638 attacks with usage of explosives. 
+
+All have the p - value of < 2.2 e-16, meaning they are all variables are correlated with Month, Year, and Country.  
+
+Main Points:
+
++ May and July were the months that we see many attacks occur
++ Middle East / North Africa region have the most attacks
++ Public places are the common hot spots for terror attacks and the targets are mostly everyday people that do not necessarily have a government job (i.e., Police and   Military)
++ Explosives/ Bombing is the type of attack favored by terrorists
++ 2014 had the most attacks
++ Terrorists prefer to make personal claims rather than claim attacks using media, calls, email, leaving a note at the scene, or other forms.
++ Police are the most targeted in Afghanistan and had the most personal claims of attacks by terrorists. Iraq is the most targeted with the usage of   
+  bombings/explosive attacks.
+
+```{r}
+
+# Month 
+
+b = table(gt2$imonth,gt2$region_txt)  
+chisq.test(b)
+chisq.test(b)$observed
+
+b2 = table(gt2$imonth,gt2$attacktype1_txt)  
+chisq.test(b2)
+chisq.test(b2)$observed
+
+b3 = table(gt2$imonth,gt2$targtype1)  
+chisq.test(b3)
+chisq.test(b3)$observed
+
+b4 = table(gt2$imonth,gt2$claimmode_txt)  
+chisq.test(b4)
+chisq.test(b4)$observed
+
+b5 = table(gt2$imonth,gt2$weaptype1_txt)  
+chisq.test(b5)
+chisq.test(b5)$observed
+            
+b6 = table(gt2$imonth,gt2$iday)  
+chisq.test(b6)
+chisq.test(b6)$observed
+  
+b7 = table(gt2$imonth,gt2$iyear)  
+chisq.test(b7)
+chisq.test(b7)$observed
+
+```
+
+
+```{r}
+
+# Year 
+
+c = table(gt2$iyear,gt2$region_txt)  
+chisq.test(c)
+chisq.test(c)$observed
+
+c2 = table(gt2$iyear,gt2$attacktype1_txt)  
+chisq.test(c2)
+chisq.test(c2)$observed
+
+c3 = table(gt2$iyear,gt2$targtype1)  
+chisq.test(c3)
+chisq.test(c3)$observed
+
+  
+c4 = table(gt2$iyear,gt2$claimmode_txt)  
+chisq.test(c4)
+chisq.test(c4)$observed
+
+c5 = table(gt2$iyear,gt2$weaptype1_txt)  
+chisq.test(c5)
+chisq.test(c5)$observed
+            
+```
+
+
+```{r}
+
+# Country 
+
+f = table(gt2$country,gt2$attacktype1_txt)  
+chisq.test(f)
+chisq.test(f)$observed
+
+f2 = table(gt2$country,gt2$targtype1)  
+chisq.test(f2)
+chisq.test(f2)$observed
+  
+f3 = table(gt2$country,gt2$claimmode_txt)  
+chisq.test(f3)
+chisq.test(f3)$observed
+
+f4 = table(gt2$country,gt2$weaptype1_txt)  
+chisq.test(f4)
+chisq.test(f4)$observed
+            
+```
+
+
+```{r}
+
+# Region
+
+r2 = table(gt2$region_txt,gt2$individual)  
+chisq.test(r2)
+chisq.test(r2)$observed
+
+r3 = table(gt2$region_txt,gt2$attacktype1_txt)  
+chisq.test(r3)
+chisq.test(r3)$observed
+
+r4 = table(gt2$region_txt,gt2$suicide)  
+chisq.test(r4)
+chisq.test(r4)$observed
+
+r5 = table(gt2$region_txt,gt2$targtype1)  
+chisq.test(r5)
+chisq.test(r5)$observed
+
+r6 = table(gt2$region_txt,gt2$individual)  
+chisq.test(r6)
+chisq.test(r6)$observed
+  
+r7 = table(gt2$region_txt,gt2$claimmode_txt)  
+chisq.test(r7)
+chisq.test(r7)$observed
+
+r8 = table(gt2$region_txt,gt2$weaptype1_txt)  
+chisq.test(r8)
+chisq.test(r8)$observed
+            
+```
+
+
+## Regression
+
+Below multiple regressions were created to see which variables would be correlated. The first model was created by selecting the most relevant variables. Afterwards, variables that were not corerlated or show any significance were removed from the model. Then, new models were created. A stepwise regression was also done with model g to see if the results were the same. The result showed similar results. 
+
+```{r}
+
+g = lm(country ~ imonth + iday + region + attacktype1 + suicide + weaptype1 + targtype1 + targsubtype1 + natlty1 + individual + nperps+ nperpcap + claimed + claimmode + nkill + nkillter + nwound + nwoundte, data = gt2)
+
+summary(g) 
+
+```
+
+
+```{r}
+
+g2 = lm(country ~ region + attacktype1 + suicide + targtype1 + targsubtype1 + natlty1 + individual + nperps+ nperpcap + claimmode, data = gt2)
+
+summary(g2)
+
+```
+
+
+```{r}
+
+g3 = lm(nkill ~  region + suicide + nperps+ nkillter + nwound + nwoundte, data = gt2)
+
+summary(g3) 
+
+```
+
+```{r}
+
+g4 = lm(natlty1 ~ country + region + attacktype1 + suicide + weaptype1 + targtype1 + targsubtype1 + nperpcap + nwoundte, data = gt2)
+
+summary(g4) 
+
+```
+
+#### Stepwise Regression
+
+```{r}
+
+h = step(lm(country ~ imonth + iday + region + attacktype1 + suicide + weaptype1 + targtype1 + targsubtype1 + natlty1 + individual + nperps+ nperpcap + claimed + claimmode + nkill + nkillter + nwound + nwoundte, data = gt2))
+
+summary(h)
+
+```
+
+
+## Plot
+
+Below are three plots that show the number of fatalities versus the terrorist organization and color coordinated by the region and the target type. ISIL has created the most fatalities with their attacks in the Middle East and North Africa region. They have targeted diplomatic government officials, police, educational institutions, and NGOs. 
+
+```{r message=FALSE, warning=FALSE}
+
+library(ggplot2)
+
+ggplot(data = gt2, aes(x = gname, y = nkill)) + geom_violin() +  geom_point(aes(color = factor(region_txt))) + scale_fill_manual(values = c("springgreen", "turquoise", "orchid2","violetred2","cadetblue3")) + theme(axis.text.x = element_text(angle = 90)) 
+
+
+ggplot(data = gt2, aes(x = gname, y = nkill)) + geom_violin() +  geom_point(aes(color = factor(targtype1_txt))) + scale_fill_manual(values = c("springgreen", "turquoise", "orchid2","violetred2","cadetblue3")) + theme(axis.text.x = element_text(angle = 90)) 
+
+```
+
+
+
+## Map
+
+Below shows the frequency of the attacks in each region. We see that the Middle East/ North African region has the most attacks. If the markers are clicked further, the details of the attacks can be seen.
+
+```{r message=FALSE, warning=FALSE}
+
+gt3 = gt2
+
+gt3 = na.omit(gt2)
+
+y = gt3
+
+library(rgdal)
+library(raster)
+library(htmlwidgets)
+
+library(leaflet)
+
+y$popup <- paste("<b>Incident #: </b>", y$eventid, "<br>",
+                 "<b>Terrorist: </b>", y$gname,
+                 "<br>", "<b>Target: </b>",y$target1 ,
+                 "<br>", "<b>Weapon Used: </b>", y$weaptype1_txt,
+                 "<br>", "<b>Claim Method: </b>", y$claimmode_txt,
+                 "<br>", "<b>Region: </b>", y$region_txt,
+                 "<br>", "<b>Longitude: </b>", y$longitude,
+                 "<br>", "<b>Latitude: </b>", y$latitude
+)
+
+
+k = leaflet(y, width = "100%") %>% addTiles() %>%
+  addTiles(group = "OSM (default)") %>%
+  addProviderTiles(provider = "Esri.WorldStreetMap",group = "World StreetMap") %>%
+  addProviderTiles(provider = "Esri.WorldImagery",group = "World Imagery") %>%
+  
+  # addProviderTiles(provider = "NASAGIBS.ViirsEarthAtNight2012",group = "Nighttime Imagery") %>%
+  addMarkers(data = y,lng = ~ longitude, lat = ~latitude, popup = y$popup, clusterOptions = markerClusterOptions()) %>%
+  
+  addLayersControl(
+    baseGroups = c("OSM (default)","World StreetMap", "World Imagery"),
+    options = layersControlOptions(collapsed = FALSE)
+    
+  )
+
+k
+
+#k$width <- 874
+#k$height <- 700
+
+#saveWidget(k,"globalterrorism_map.html", selfcontained = FALSE)   
+
+```
+
+
+
