@@ -33,18 +33,26 @@ Chi-square and regression were used to conduct the analysis for the data. The Ch
 Using stepwise regression and multiple regression, the variables country, region, type of attack, suicide attacks, target type, nationality of victim/target, individual attacks, perpetrators killed and captured, and the terrorist method of claiming attacks were correlated. However, the regression did not answer the questions that were needed for the analysis. The chi-square was a better method in seeing when the attacks occured and who was the most targeted. The nationality of the terrorists unfortunately were not able to find.
 
 In order to futher investigate, two plots and a map were created. Below are three plots that show the number of fatalities versus the terrorist organization and color coordinated by the region and the target type. ISIL has created the most fatalities with their attacks in the Middle East and North Africa region. They have targeted diplomatic government officials, police, educational institutions, and NGOs.
+&nbsp;&nbsp;
 
 ![Plot 1](https://github.com/aylinko/globalterrorism/blob/master/Plot%201.PNG)
 
+&nbsp;&nbsp;
+
 ![plot2](https://github.com/aylinko/globalterrorism/blob/master/plot2.PNG)
+
+&nbsp;&nbsp;
 
 Below shows the frequency of the attacks in each region. We see that the Middle East/ North African region has the most attacks. If the markers are clicked further, the details of the attacks can be seen. 
 
+&nbsp;&nbsp;
 ![Map 1](https://github.com/aylinko/globalterrorism/blob/master/Map%201.PNG)
 
+&nbsp;&nbsp;
 ![Map2](https://github.com/aylinko/globalterrorism/blob/master/Map2.PNG)
+&nbsp;&nbsp;
 
-Note: Was not able to upload the leaflet widget on this page. The file for the map can be found in the github page.
+Note: Was not able to currently upload the leaflet widget on this page. The code and actual map file can be found in the globalterrorism page.
 
 ## Conclusion 
 
