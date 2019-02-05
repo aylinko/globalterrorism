@@ -50,12 +50,10 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 
 &nbsp;&nbsp;
 ### Map Shown With Frequency of Attacks
-
 ![Map 1](https://github.com/aylinko/globalterrorism/blob/master/Map%201.PNG)
 
 &nbsp;&nbsp;
 ### Map Shown with Attack Description
-
 ![Map2](https://github.com/aylinko/globalterrorism/blob/master/Map2.PNG)
 &nbsp;&nbsp;
 
