@@ -1,7 +1,7 @@
 # Analysis of Terror in the World
 ### Aylin Kosar
 
-## Table of contents
+### Table of contents
 
 - [Introduction](#Introduction)
 - [Data](#Data)
