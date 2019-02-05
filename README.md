@@ -34,13 +34,13 @@ Using stepwise regression and multiple regression, the variables country, region
 
 In order to futher investigate, two plots and a map were created. Below are three plots that show the number of fatalities versus the terrorist organization and color coordinated by the region and the target type. ISIL has created the most fatalities with their attacks in the Middle East and North Africa region. They have targeted diplomatic government officials, police, educational institutions, and NGOs.
 
-![plot1](https://github.com/aylinko/globalterrorism/blob/master/Plot%201.PNG)
+![Plot 1](https://github.com/aylinko/globalterrorism/blob/master/Plot%201.PNG)
 
 ![plot2](https://github.com/aylinko/globalterrorism/blob/master/plot2.PNG)
 
 Below shows the frequency of the attacks in each region. We see that the Middle East/ North African region has the most attacks. If the markers are clicked further, the details of the attacks can be seen. 
 
-![Map1](https://github.com/aylinko/globalterrorism/blob/master/Map%201.PNG)
+![Map 1](https://github.com/aylinko/globalterrorism/blob/master/Map%201.PNG)
 
 ![Map2](https://github.com/aylinko/globalterrorism/blob/master/Map2.PNG)
 
