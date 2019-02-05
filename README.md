@@ -44,8 +44,7 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 
 ![Map2](https://github.com/aylinko/globalterrorism/blob/master/Map2.PNG)
 
-shiny::includeHTML("~/R Data Files/newFI11-15Map.html") 
-
+Note: Was not able to upload the leaflet widget on this page. The file for the map can be found in the github page.
 
 ## Conclusion 
 
