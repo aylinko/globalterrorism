@@ -63,21 +63,6 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 
 We can see that most attacks are in the Middle East/North Africa region. The ones who are targeted are everday people that don't have a job as police officer or are in the military. Unfortunately, the nationality of the terrorists were not able to be identified. This would have been helpful to know since we always assume most terrorists are Middle Eastern and that not all are actually of that enationality but could be of any nationality. We know that most attacks occur in May and July. The year 2014 had the most attacks.
 
-<script src="globalterrorism_map_files/htmlwidgets-1.3/htmlwidgets.js"></script>
-<script src="globalterrorism_map_files/jquery-1.12.4/jquery.min.js"></script>
-<link href="globalterrorism_map_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
-<script src="globalterrorism_map_files/leaflet-1.3.1/leaflet.js"></script>
-<link href="globalterrorism_map_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-<script src="globalterrorism_map_files/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
-<script src="globalterrorism_map_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="globalterrorism_map_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="globalterrorism_map_files/leaflet-binding-2.0.2/leaflet.js"></script>
-<script src="globalterrorism_map_files/leaflet-providers-1.1.17/leaflet-providers.js"></script>
-<script src="globalterrorism_map_files/leaflet-providers-plugin-2.0.2/leaflet-providers-plugin.js"></script>
-<link href="globalterrorism_map_files/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
-<link href="globalterrorism_map_files/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
-<script src="globalterrorism_map_files/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
-<script src="globalterrorism_map_files/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js"></script>
-<script src="globalterrorism_map_files/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js"></script>
+
 <div id="htmlwidget-f66e57f502847300b099" style="width:874px;height:700px;" class="leaflet html-widget"></div>
 
