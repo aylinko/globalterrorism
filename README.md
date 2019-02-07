@@ -36,13 +36,12 @@ In order to futher investigate, two plots and a map were created. Below are thre
 
 &nbsp;&nbsp;
 ### Terrorist Group vs. Fatalites  (Color coordinated with Region)
-
-![Plot 1](https://github.com/aylinko/globalterrorism/blob/master/Plot%201.PNG)
+![Plot 1](Plot%201.PNG)
 
 &nbsp;&nbsp;
 ### Terrorist Group vs. Fatalites  (Color coordinated with Target Type)
 
-![plot2](https://github.com/aylinko/globalterrorism/blob/master/plot2.PNG)
+![plot2](plot2.PNG)
 
 &nbsp;&nbsp;
 
@@ -50,11 +49,11 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 
 &nbsp;&nbsp;
 ### Map Shown With Frequency of Attacks
-![Map 1](https://github.com/aylinko/globalterrorism/blob/master/Map%201.PNG)
+![Map 1](Map%201.PNG)
 
 &nbsp;&nbsp;
 ### Map Shown with Attack Description
-![Map2](https://github.com/aylinko/globalterrorism/blob/master/Map2.PNG)
+![Map2](Map2.PNG)
 &nbsp;&nbsp;
 
 ##### Note: Was not able to currently upload the leaflet widget on this page. The code and actual map file can be found in the globalterrorism page.
@@ -64,5 +63,5 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 We can see that most attacks are in the Middle East/North Africa region. The ones who are targeted are everday people that don't have a job as police officer or are in the military. Unfortunately, the nationality of the terrorists were not able to be identified. This would have been helpful to know since we always assume most terrorists are Middle Eastern and that not all are actually of that enationality but could be of any nationality. We know that most attacks occur in May and July. The year 2014 had the most attacks.
 
 
-<div id="htmlwidget-f66e57f502847300b099" style="width:874px;height:700px;" class="leaflet html-widget"></div>
+
 
