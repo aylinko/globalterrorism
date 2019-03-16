@@ -56,7 +56,7 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 ![Map2](Map2.PNG)
 &nbsp;&nbsp;
 
-{% include globalterrorism_map.html id="htmlwidget-1d763eeb152218571eeb" %} 
+{% include "globalterrorism_map.html" id="htmlwidget-1d763eeb152218571eeb" %} 
 
 ##### Note: Was not able to currently upload the leaflet widget on this page. The code and actual map file can be found in the globalterrorism page.
 
