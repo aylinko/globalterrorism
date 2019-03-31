@@ -56,6 +56,8 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 ![Map2](Map2.PNG)
 &nbsp;&nbsp;
 
+<script src="https://github.com/aylinko/globalterrorism/blob/master/globalterrorism_map.html"></script>
+
 ##### Note: Was not able to currently upload the leaflet widget on this page. The code and actual map file can be found in the globalterrorism page.
 
 ## Conclusion 
