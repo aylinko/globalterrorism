@@ -4,7 +4,6 @@ my_variable: globalterrorism_map.html
 
 ---
 
-
 # Analysis of Terror in the World
 ### Aylin Kosar
 
@@ -56,9 +55,7 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 
 &nbsp;&nbsp;
 
-
 {% include globalterrorism_map.html %}
-
 
 ## Conclusion 
 
