@@ -1,3 +1,9 @@
+---
+
+my_variable: globalterrorism_map.html
+
+---
+
 # Analysis of Terror in the World
 ### Aylin Kosar
 
