@@ -1,6 +1,6 @@
 ---
 
-my_variable: globalterrorism_map.html 
+my_variable: globalterrorism_map.html
 
 ---
 
@@ -55,9 +55,7 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 
 &nbsp;&nbsp;
 
-
 {% include globalterrorism_map.html %}
-
 
 ## Conclusion 
 
