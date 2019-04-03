@@ -54,6 +54,15 @@ In order to futher investigate, two plots and a map were created. Below are thre
 Below shows the frequency of the attacks in each region. We see that the Middle East/ North African region has the most attacks. If the markers are clicked further, the details of the attacks can be seen. 
 
 &nbsp;&nbsp;
+### Map Shown With Frequency of Attacks
+![Map 1](Map%201.PNG)
+
+&nbsp;&nbsp;
+### Map Shown with Attack Description
+![Map2](Map2.PNG)
+&nbsp;&nbsp;
+
+##### Note: Was not able to currently upload the leaflet widget on this page. The code and actual map file can be found in the globalterrorism page.
 
 {% include globalterrorism_map.html %}
 
