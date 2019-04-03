@@ -53,8 +53,6 @@ In order to futher investigate, two plots and a map were created. Below are thre
 
 Below shows the frequency of the attacks in each region. We see that the Middle East/ North African region has the most attacks. If the markers are clicked further, the details of the attacks can be seen. 
 
-&nbsp;&nbsp;
-
 {% include globalterrorism_map.html %}
 
 ## Conclusion 
