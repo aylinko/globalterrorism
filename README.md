@@ -24,7 +24,7 @@ Global terrorism affects our world today and is many times portrayed with a misu
 
 The data was used was from the National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2018). The Global Terrorism Database (GTD) [Data file]. Retrieved from https://www.start.umd.edu/gtd". The same data set made public can be found in this Kaggle page https://www.kaggle.com/ecodan/global-terrorism-db/home. The data set contains **181691** observations and **135** variables. Eventually, the data was preprocessed to **167355** observations and **36** variables. 
 
-## Analysis
+## Analysis 
 
 Chi-square and regression were used to conduct the analysis for the data. The Chi-square resulted in the following
 
