@@ -55,7 +55,6 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 
 
 {% include globalterrorism_map.html %}
-<div id="htmlwidget-1d763eeb152218571eeb" style="width:874px;height:700px;" class="leaflet html-widget"></div>
 
  
 ## Conclusion    
