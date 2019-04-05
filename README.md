@@ -1,5 +1,6 @@
 ---
 
+permalink: /index.html
 my_variable: globalterrorism_map.html
 
 ---
