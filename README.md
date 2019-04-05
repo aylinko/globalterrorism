@@ -59,6 +59,6 @@ Below shows the frequency of the attacks in each region. We see that the Middle 
 
 
 ## Conclusion   
-
+ 
 We can see that most attacks are in the Middle East/North Africa region. The ones who are targeted are everday people that don't have a job as police officer or are in the military. Unfortunately, the nationality of the terrorists were not able to be identified. This would have been helpful to know since we always assume most terrorists are Middle Eastern and that not all are actually of that nationality but could be of any nationality. We know that most attacks occur in May and July. The year 2014 had the most attacks.
  
