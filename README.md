@@ -42,7 +42,7 @@ In order to futher investigate, two plots and a map were created. Below are thre
 
 &nbsp;&nbsp;
 ### Terrorist Group vs. Fatalites  (Color coordinated with Region)
-![Plot 1](Plot%201.PNG)
+![Plot 1](Plot%201.PNG) 
 
 &nbsp;&nbsp;
 ### Terrorist Group vs. Fatalites  (Color coordinated with Target Type)
