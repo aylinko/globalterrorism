@@ -3,6 +3,6 @@
 
 @import "{{ site.theme }}";
 
-.leaflet-marker-icon {
-  background-color: transparent;
+.markdown-body .leaflet img {
+  background-color: transparent !important
 }
